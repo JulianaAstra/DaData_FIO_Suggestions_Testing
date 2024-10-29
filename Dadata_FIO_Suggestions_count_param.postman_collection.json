@@ -1,0 +1,1012 @@
+{
+	"info": {
+		"_postman_id": "fa069d58-d959-404f-8dd8-53aaa7f87300",
+		"name": "Dadata_FIO_Suggestions_count_param",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38170183"
+	},
+	"item": [
+		{
+			"name": "01_fio_count_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 10);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02_fio_count_11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 11);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03_fio_count_20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 20);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04_fio_count_21",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 20);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							"console.log(arr)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": 21\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05_fio_count_not_existing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 10);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "06_fio_count_char",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test('Response code must be equal 400', () => {\r",
+							"    pm.expect(pm.response.code).eql(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": \"a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "07_fio_count_bigint",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 20);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": 1000000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "08_fio_count_symbols",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test('Response code must be equal 400', () => {\r",
+							"    pm.expect(pm.response.code).eql(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": \"?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "09_fio_count_zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 10);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10_fio_count_null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test('Response code must be equal 400', () => {\r",
+							"    pm.expect(pm.response.code).eql(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": \"Null\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11_fio_count_not_specified",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test('Response code must be equal 400', () => {\r",
+							"    pm.expect(pm.response.code).eql(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12_fio_count_-1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"expected_count\", 10);\r",
+							"\r",
+							"pm.test('Response code must be equal 200', () => {\r",
+							"    pm.expect(pm.response.code).eql(200);\r",
+							"});\r",
+							"\r",
+							"let arr = pm.collectionVariables.get(\"array\");\r",
+							"\r",
+							"pm.test('Number of suggestions must be equal to expected value', () => {\r",
+							"    expectedCount = pm.environment.get('expected_count');\r",
+							"    pm.expect(arr.length).eql(expectedCount);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{content-type}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"М\",\r\n  \"count\": -1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"suggest",
+						"fio"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"let jsonObject;\r",
+					"let array;\r",
+					"\r",
+					"let contentType = pm.collectionVariables.get(\"content-type\");\r",
+					"\r",
+					"if (pm.response.code === 400) {\r",
+					"    return;\r",
+					"}\r",
+					"\r",
+					"if (contentType === 'application/xml') {\r",
+					"    jsonObject = xml2Json(responseBody);\r",
+					"    array = jsonObject.SuggestResponse.suggestions;\r",
+					"} else {\r",
+					"    jsonObject = pm.response.json();\r",
+					"    array = jsonObject.suggestions;\r",
+					"}\r",
+					"\r",
+					"pm.collectionVariables.set(\"array\", array);"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "content-type",
+			"value": "application/json",
+			"type": "default"
+		},
+		{
+			"key": "token",
+			"value": "Token 793d2830a6360a1569c8e7b9dd1afeb2f57ffa77"
+		},
+		{
+			"key": "array",
+			"value": ""
+		}
+	]
+}
