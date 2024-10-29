@@ -52,3 +52,13 @@ pm.test('Number of suggestions must be equal to expected value', () => {
     pm.expect(arr.length).eql(expectedCount);
 });
 ```
+##### Скриншоты запросов: 
+
+- C переменными в заголовках и телом ответа:
+
+![](https://github.com/JulianaAstra/DaData_FIO_Suggestions_Testing/blob/main/request_body_with_variables_in_header.png)
+
+
+- C результатами тестов и скриптами:
+
+![](https://github.com/JulianaAstra/DaData_FIO_Suggestions_Testing/blob/main/request_with_scripts_and_test_results.png)
